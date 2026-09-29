@@ -5,383 +5,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avinash Raj | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Using Outfit and Inter fonts for that sleek, modern aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">Avinash<span>Raj</span></a>
+        <div class="nav-container glass-nav">
+            <a href="#home" class="logo">
+                <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="url(#paint0_linear)"/>
+                    <path d="M20 10L30 20L20 30L10 20L20 10Z" fill="#110A18"/>
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#9d4edd" />
+                            <stop offset="1" stop-color="#ff79c6" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="btn-nav">About Me</a></li>
+                <li><a href="#experience" class="btn-nav">Experience</a></li>
+                <li><a href="#services" class="btn-nav">Our Service</a></li>
+                <li><a href="#" class="btn-nav resume-nav-btn" id="resumeNavBtn"><i class="fas fa-file-alt"></i> Resume</a></li>
             </ul>
+            <a href="#contact" class="btn-primary">Contact Me</a>
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text fade-in-up">
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Avinash Raj</h1>
-                <h2 class="title">CS student and Full-Stack Developer at SISTec Bhopal</h2>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    <section id="home" class="hero section">
+        <div class="container hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">Hello,<br><span class="subtitle">Delivering efficient, scalable<br>solutions to transform your<br>tech vision into reality.</span></h1>
+                
+                <div class="hero-roles">
+                    <div class="role-line">CS Student</div>
+                    <div class="role-line">Full-Stack Dev</div>
+                    <div class="role-line">AI Enthusiast</div>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/Avinash58" target="_blank" class="social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:avinashne2207@gmail.com" class="social-icon">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="hero-cta-btns">
+                    <button class="btn-primary btn-resume" id="viewResumeBtn">
+                        <i class="fas fa-file-user"></i> View Resume
+                    </button>
                 </div>
             </div>
-            <div class="hero-visual fade-in-up delay-1">
-                <div class="profile-circle">
-                    <img src="avinash pic.jpeg" alt="Avinash Raj" class="profile-image">
-                    <div class="accent-box"></div>
+
+            <div class="hero-center">
+                <div class="profile-wrapper">
+                    <!-- Geometric lines connecting socials -->
+                    <svg class="geo-lines" width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M -100 150 Q 50 100 150 50 T 350 100 L 450 150" stroke="url(#line-grad)" stroke-width="2" fill="none"/>
+                        <circle cx="150" cy="50" r="5" fill="#fff"/>
+                        <circle cx="350" cy="100" r="5" fill="#fff"/>
+                        <defs>
+                            <linearGradient id="line-grad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="rgba(255,255,255,0)" />
+                                <stop offset="0.5" stop-color="rgba(255,255,255,0.8)" />
+                                <stop offset="1" stop-color="rgba(255,255,255,0)" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    
+                    <div class="social-nodes">
+                        <a href="https://github.com/Avinash58" target="_blank" class="node github" style="top: 20%; left: -10%;"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank" class="node linkedin" style="top: 40%; right: -15%;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    
+                    <img src="avinash pic.jpeg" alt="Avinash Raj" class="hero-img">
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <h2 class="hero-name">I am<br>Avinash<br>Raj</h2>
+            </div>
+        </div>
+
+        <!-- Integrated About Me Card (overlapping hero bottom) -->
+        <div class="container" id="about">
+            <div class="glass-card about-main-card">
+                <div class="about-text-area">
+                    <h2 class="card-title">About Me</h2>
+                    <p>I'm a Computer Science Engineering student at SISTec, Bhopal with 5th semester proficiency. I'm focused on creating innovative, reliable full-stack applications and AI-enabled productivity tools that help businesses thrive in the digital world.</p>
+                </div>
+                
+                <div class="about-mini-cards">
+                    <div class="mini-card">
+                        <div class="mini-icon icon-purple"><i class="fas fa-layer-group"></i></div>
+                        <div class="mini-content">
+                            <h3>Build your quick web with MERN Stack, Flask, and Python.</h3>
+                        </div>
+                        <a href="#projects" class="mini-arrow"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="mini-card">
+                        <div class="mini-icon icon-pink"><i class="fas fa-code"></i></div>
+                        <div class="mini-content">
+                            <h3>Understand programming languages such as Java, C++, Python, SQL.</h3>
+                        </div>
+                        <a href="#skills" class="mini-arrow"><i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#about" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
+    <!-- Experience / Success Stories -->
+    <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a Computer Science Engineering student at SISTec, Bhopal with a passion for building innovative solutions. Currently in my 5th semester, I specialize in Python, Flask, MERN Stack, and SQL development.</p>
-                    <p>With hands-on experience in developing full-stack web applications and AI-enabled productivity tools, I'm actively seeking internship and entry-level opportunities in software development, full-stack development, and AI-based systems.</p>
-                    <div class="about-tags">
-                        <span class="tag">Full-Stack Developer</span>
-                        <span class="tag">AI Enthusiast</span>
-                        <span class="tag">Problem Solver</span>
-                        <span class="tag">Quick Learner</span>
+            <h2 class="section-heading text-center">Engineering Success Stories</h2>
+            
+            <div class="list-container">
+                
+                <!-- Project 1 -->
+                <div class="list-item">
+                    <div class="item-header">
+                        <div>
+                            <h3 class="item-title">Civic Issue Reporting System – Full-Stack Project</h3>
+                            <span class="item-date">Recent Project</span>
+                        </div>
+                        <div class="item-tags">
+                            <span class="tag">MERN</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                    <div class="item-body">
+                        <div class="item-visual placeholder-visual">
+                            <i class="fas fa-city text-purple"></i>
+                        </div>
+                        <div class="item-desc">
+                            <p>A full-stack platform enabling citizens to report local issues. Implemented real-time issue tracking and integrated Python scripts for data validation and geolocation, significantly improving reporting transparency.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="about-info">
-                    <div class="info-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Bhopal, M.P, India</span>
+
+                <!-- Project 2 -->
+                <div class="list-item">
+                    <div class="item-header">
+                        <div>
+                            <h3 class="item-title">AI Productivity Tracker (Study Mate)</h3>
+                            <span class="item-date">Recent Project</span>
+                        </div>
+                        <div class="item-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 7295053251</span>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-envelope"></i>
-                        <span>avinashne2207@gmail.com</span>
+                    <div class="item-body">
+                        <div class="item-visual placeholder-visual">
+                            <i class="fas fa-chart-line text-pink"></i>
+                        </div>
+                        <div class="item-desc">
+                            <p>A web-based productivity application to organize schedules and track progress. Features task logging, visualizations, and data-driven analytical performance reports.</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section bg-light">
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                        <span class="skill-tag"><i class="fas fa-code"></i> C</span>
-                        <span class="skill-tag"><i class="fas fa-code"></i> C++</span>
-                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
-                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
-                    </div>
+            <h2 class="section-heading text-center">My Skills and Development</h2>
+            
+            <div class="skills-square-grid">
+                
+                <div class="glass-square">
+                    <div class="square-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fast</h3>
+                    <p>Optimal performance, ensuring quick load times and seamless user experience across all platforms.</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Web Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
-                        <span class="skill-tag"><i class="fab fa-node"></i> Node.js</span>
-                        <span class="skill-tag"><i class="fab fa-react"></i> React</span>
-                    </div>
+                
+                <div class="glass-square">
+                    <div class="square-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Responsive</h3>
+                    <p>Adaptive layouts designed to work flawlessly on any screen size, from mobile to desktop.</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-database"></i> SQLite</span>
-                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
-                    </div>
+                
+                <div class="glass-square">
+                    <div class="square-icon"><i class="far fa-lightbulb"></i></div>
+                    <h3>Intuitive</h3>
+                    <p>Crafting user-friendly interfaces that prioritize ease of navigation and smooth interaction.</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
-                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
-                        <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
-                        <span class="skill-tag"><i class="fas fa-robot"></i> Generative AI</span>
-                        <span class="skill-tag"><i class="fas fa-brain"></i> Agentic AI</span>
-                    </div>
+                
+                <div class="glass-square">
+                    <div class="square-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Dynamic</h3>
+                    <p>Bringing web pages to life with interactive elements and modern animations.</p>
                 </div>
+
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-building"></i>
-                        <h3>Civic Issue Reporting System</h3>
-                    </div>
-                    <p class="project-description">A full-stack civic issue reporting platform enabling citizens to report and track local issues such as potholes and waste. Implemented real-time issue tracking and integrated Python scripts for data validation and geolocation.</p>
-                    <div class="project-tech">
-                        <span>MERN Stack</span>
-                        <span>Python</span>
-                        <span>Geolocation API</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Real-time issue tracking</li>
-                            <li>Data validation with Python</li>
-                            <li>Geolocation integration</li>
-                            <li>Improved transparency in civic issues</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>AI Productivity Tracker (Study Mate)</h3>
-                    </div>
-                    <p class="project-description">A web-based productivity management application to help students organize study schedules and track progress. Features task logging, progress visualization, and analytical performance reports.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>HTML/CSS</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Task logging system</li>
-                            <li>Progress visualization</li>
-                            <li>Analytical reports</li>
-                            <li>Data-driven insights</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023 - 2027</span>
-                        <h3>B.Tech in Computer Science & Engineering</h3>
-                        <p class="institution">Sagar Institute of Science and Technology (SISTec), RGPV University, Bhopal</p>
-                        <p class="current">Current Semester: 5th</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023</span>
-                        <h3>Higher Secondary Education (CBSE)</h3>
-                        <p class="institution">Modern Academy, Ashok Nagar, Gaya, Bihar</p>
-                        <p class="marks">Percentage: 63.8%</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2021</span>
-                        <h3>Secondary School (CBSE)</h3>
-                        <p class="institution">D.A.V C.R.R.C Medical, Gaya, Bihar</p>
-                        <p class="marks">Percentage: 82.65%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-        <div class="container">
-            <h2 class="section-title">Certifications & Training</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python Programming</h3>
-                    <p>Cisco Networking Academy</p>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Front End Developer</h3>
-                    <p>Infosys</p>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data Analytics Job Simulation</h3>
-                    <p>Deloitte</p>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-atom"></i>
-                    </div>
-                    <h3>Quantum Computing</h3>
-                    <p>Certified Program</p>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Gen-AI Exchange Program</h3>
-                    <p>H2Skills (3 Months)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Achievements & Activities</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Qualified SIH 2025</h3>
-                    <p>Smart India Hackathon Internal Round</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>TcsCodevita13</h3>
-                    <p>Qualified for Round 2 (2025) | Ranked 8067 in Round 1</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Super 50 Student</h3>
-                    <p>Selected member at SISTec, Bhopal</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3>GitHub Contributor</h3>
-                    <p>Active contributor to open source repositories</p>
-                </div>
-            </div>
-            <div class="workshops">
-                <h3>Workshops & Training</h3>
-                <ul class="workshop-list">
-                    <li><i class="fas fa-check-circle"></i> Participated in Smart India Hackathon (SIH), Samadhan, and multiple national-level hackathons</li>
-                    <li><i class="fas fa-check-circle"></i> Attended Java, C, and C++ workshops at SISTec</li>
-                    <li><i class="fas fa-check-circle"></i> Training from Cisco Networking Academy, C-DAC Hyderabad, and IIT Roorkee</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+    
+    <!-- Education / Achievements (Simplified for design) -->
+    <section id="achievements" class="section">
+         <div class="container">
+            <h2 class="section-heading text-center">Education & Achievements</h2>
+            <div class="list-container">
+                <div class="list-item">
+                     <div class="item-header">
                         <div>
-                            <h4>Location</h4>
-                            <p>Bhopal, M.P, India</p>
+                            <h3 class="item-title">B.Tech in Computer Science & Engineering</h3>
+                            <span class="item-date">2023 - 2027</span>
+                        </div>
+                        <div class="item-tags">
+                            <span class="tag">SISTec, Bhopal</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 7295053251</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>avinashne2207@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank" class="contact-social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Avinash58" target="_blank" class="contact-social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
                 </div>
-                <div class="contact-cta">
-                    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                    <a href="mailto:avinashne2207@gmail.com" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </a>
+                <div class="list-item">
+                     <div class="item-header">
+                        <div>
+                            <h3 class="item-title">Qualified SIH 2025 & TcsCodevita13 Round 2</h3>
+                            <span class="item-date">2024-2025</span>
+                        </div>
+                        <div class="item-tags">
+                            <span class="tag">Hackathon</span>
+                            <span class="tag">Coding</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer / Contact -->
+    <footer id="contact" class="footer section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#home">Avinash<span>Raj</span></a>
+            <div class="glass-card contact-card">
+                <h2 class="card-title text-center">Let's work together!</h2>
+                <p class="text-center mb-4">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-gradient">Subscribe</button>
+                    </div>
+                </form>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Avinash Raj. All rights reserved.</p>
+                    <div class="social-links-footer">
+                        <a href="mailto:avinashne2207@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Avinash58" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-                <p class="footer-text">Computer Science Engineering Student | Full-Stack Developer | AI Enthusiast</p>
-                <p class="copyright">&copy; 2024 Avinash Raj. All rights reserved.</p>
-                <p class="declaration">"I hereby declare that the information provided above is true and correct to the best of my knowledge."</p>
             </div>
         </div>
     </footer>
 
+    <!-- Resume Modal -->
+    <div class="resume-modal" id="resumeModal">
+        <div class="resume-modal-overlay" id="resumeOverlay"></div>
+        <div class="resume-modal-content">
+            <button class="resume-modal-close" id="resumeClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="resume-modal-header">
+                <h3><i class="fas fa-file-alt"></i> Avinash Raj &mdash; Resume</h3>
+                <a href="resume.pdf" download="Avinash_Raj_Resume.pdf" class="btn-download">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+            <div class="resume-img-wrapper">
+                <iframe src="resume.pdf" class="resume-pdf-frame" title="Avinash Raj Resume"></iframe>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
