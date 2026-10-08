@@ -8,8 +8,12 @@ const sections = document.querySelectorAll('section');
 // Smooth scrolling for navigation links
 navLinksItems.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
         const targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#' || !targetId.startsWith('#')) {
+            return; // Allow modal triggers or non-anchor links
+        }
+        
+        e.preventDefault();
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
@@ -80,16 +84,16 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('animate');
             
             // Add stagger animation for children
-            const children = entry.target.querySelectorAll('.list-item, .glass-square, .mini-card');
+            const children = entry.target.querySelectorAll('.list-item, .glass-square, .mini-card, .skill-cat-card, .project-card, .info-card, .contact-detail-card');
             children.forEach((child, index) => {
-                child.style.animationDelay = `${index * 0.15}s`;
+                child.style.animationDelay = `${index * 0.12}s`;
             });
         }
     });
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.list-item, .glass-square, .mini-card, .about-main-card, .contact-card').forEach(el => {
+document.querySelectorAll('.list-item, .glass-square, .mini-card, .about-main-card, .contact-card, .skill-cat-card, .project-card, .info-card, .contact-detail-card, .extra-details-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s ease';
@@ -215,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach hover state after DOM is ready
     function attachHoverTargets() {
         const hoverTargets = document.querySelectorAll(
-            'a, button, [role="button"], .mini-arrow, .node, .glass-square, .mini-card, .list-item, .tag, .btn-download, .btn-resume, .btn-primary, .btn-nav, .resume-modal-close'
+            'a, button, [role="button"], .mini-arrow, .node, .glass-square, .mini-card, .list-item, .tag, .btn-download, .btn-resume, .btn-primary, .btn-nav, .resume-modal-close, .skill-chip, .skill-cat-card, .project-card, .project-btn, .info-card, .contact-detail-card, .quick-badge'
         );
         hoverTargets.forEach(el => {
             el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avinash Raj | Portfolio</title>
+    <title>Avinash Raj | B.Tech CSE | Full-Stack & AI Developer</title>
+    <meta name="description" content="Portfolio of Avinash Raj - B.Tech Computer Science & Engineering undergraduate at SISTec GN, Bhopal. Full-stack web developer specializing in Python, FastAPI, Flask, Next.js, and Google Gemini AI integrations.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Using Outfit and Inter fonts for that sleek, modern aesthetic -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container glass-nav">
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" title="Avinash Raj Home">
                 <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="url(#paint0_linear)"/>
                     <path d="M20 10L30 20L20 30L10 20L20 10Z" fill="#110A18"/>
@@ -36,13 +37,16 @@
                 </svg>
             </a>
             <ul class="nav-links">
-                <li><a href="#about" class="btn-nav">About Me</a></li>
-                <li><a href="#experience" class="btn-nav">Experience</a></li>
-                <li><a href="#services" class="btn-nav">Our Service</a></li>
+                <li><a href="#about" class="btn-nav">About</a></li>
+                <li><a href="#skills" class="btn-nav">Skills</a></li>
+                <li><a href="#projects" class="btn-nav">Projects</a></li>
+                <li><a href="#education" class="btn-nav">Education & Certs</a></li>
+                <li><a href="#hackathons" class="btn-nav">Hackathons</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
                 <li><a href="#" class="btn-nav resume-nav-btn" id="resumeNavBtn"><i class="fas fa-file-alt"></i> Resume</a></li>
             </ul>
-            <a href="#contact" class="btn-primary">Contact Me</a>
-            <div class="hamburger">
+            <a href="#contact" class="btn-primary">Hire Me</a>
+            <div class="hamburger" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </div>
         </div>
@@ -52,17 +56,27 @@
     <section id="home" class="hero section">
         <div class="container hero-container">
             <div class="hero-left">
-                <h1 class="hero-title">Hello,<br><span class="subtitle">Delivering efficient, scalable<br>solutions to transform your<br>tech vision into reality.</span></h1>
+                <h1 class="hero-title">Hello,<br><span class="subtitle">B.Tech Computer Science & Engineering undergraduate at SISTec GN, Bhopal. Building scalable REST APIs, full-stack systems, and LLM-powered applications.</span></h1>
                 
                 <div class="hero-roles">
-                    <div class="role-line">CS Student</div>
-                    <div class="role-line">Full-Stack Dev</div>
-                    <div class="role-line">AI Enthusiast</div>
+                    <div class="role-line">Full-Stack & Python Developer</div>
+                    <div class="role-line">FastAPI, Flask & Next.js</div>
+                    <div class="role-line">LLM & Gemini API Integrations</div>
                 </div>
-                <div class="hero-cta-btns">
+
+                <div class="hero-contact-quick">
+                    <span class="quick-badge"><i class="fas fa-map-marker-alt"></i> Bhopal, MP, India</span>
+                    <a href="mailto:aviraj22072005@gmail.com" class="quick-badge"><i class="fas fa-envelope"></i> aviraj22072005@gmail.com</a>
+                    <a href="tel:+917295053251" class="quick-badge"><i class="fas fa-phone"></i> +91-7295053251</a>
+                </div>
+
+                <div class="hero-cta-btns" style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap;">
                     <button class="btn-primary btn-resume" id="viewResumeBtn">
-                        <i class="fas fa-file-user"></i> View Resume
+                        <i class="fas fa-file-alt"></i> View Resume
                     </button>
+                    <a href="#projects" class="project-btn" style="padding: 12px 24px;">
+                        <i class="fas fa-code-branch"></i> Explore Projects
+                    </a>
                 </div>
             </div>
 
@@ -83,8 +97,9 @@
                     </svg>
                     
                     <div class="social-nodes">
-                        <a href="https://github.com/Avinash58" target="_blank" class="node github" style="top: 20%; left: -10%;"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank" class="node linkedin" style="top: 40%; right: -15%;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Avinash58" target="_blank" rel="noopener noreferrer" class="node github" style="top: 15%; left: -10%;" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank" rel="noopener noreferrer" class="node linkedin" style="top: 45%; right: -15%;" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:aviraj22072005@gmail.com" class="node email" style="bottom: 12%; left: -8%;" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                     
                     <img src="avinash pic.jpeg" alt="Avinash Raj" class="hero-img">
@@ -97,176 +112,480 @@
         </div>
 
         <!-- Integrated About Me Card (overlapping hero bottom) -->
-        <div class="container" id="about">
+        <div class="container" id="about" style="margin-top: 40px;">
             <div class="glass-card about-main-card">
                 <div class="about-text-area">
-                    <h2 class="card-title">About Me</h2>
-                    <p>I'm a Computer Science Engineering student at SISTec, Bhopal with 5th semester proficiency. I'm focused on creating innovative, reliable full-stack applications and AI-enabled productivity tools that help businesses thrive in the digital world.</p>
+                    <h2 class="card-title">Professional Summary</h2>
+                    <p style="margin-bottom: 14px; line-height: 1.7;">
+                        Computer Science & Engineering undergraduate with a strong foundation in <strong>Data Structures & Algorithms</strong>, <strong>Object-Oriented Programming</strong>, and Python-based software development. Hands-on experience building REST APIs, full-stack web applications, and database-driven systems using <strong>Python, Flask, FastAPI, SQL, JavaScript, TypeScript, and React/Next.js</strong>, including client-server architecture, MVC design, real-time dashboards, and LLM-powered (Google Gemini) features.
+                    </p>
+                    <p style="line-height: 1.7;">
+                        Strong problem-solving and collaboration skills developed through team projects, hackathons, and certifications; a quick learner eager to apply these skills to real-world software engineering problems.
+                    </p>
                 </div>
                 
                 <div class="about-mini-cards">
                     <div class="mini-card">
-                        <div class="mini-icon icon-purple"><i class="fas fa-layer-group"></i></div>
+                        <div class="mini-icon icon-purple"><i class="fas fa-network-wired"></i></div>
                         <div class="mini-content">
-                            <h3>Build your quick web with MERN Stack, Flask, and Python.</h3>
+                            <h3>Full-Stack & APIs</h3>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">FastAPI, Flask, REST APIs, Next.js, React, MVC Architecture & Docker Compose.</p>
                         </div>
                         <a href="#projects" class="mini-arrow"><i class="fas fa-arrow-right"></i></a>
                     </div>
                     
                     <div class="mini-card">
-                        <div class="mini-icon icon-pink"><i class="fas fa-code"></i></div>
+                        <div class="mini-icon icon-pink"><i class="fas fa-brain"></i></div>
                         <div class="mini-content">
-                            <h3>Understand programming languages such as Java, C++, Python, SQL.</h3>
+                            <h3>AI & LLM Integration</h3>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">Google Gemini 2.5 Flash, structured outputs, multi-tier fallback & travel chatbots.</p>
                         </div>
-                        <a href="#skills" class="mini-arrow"><i class="fas fa-arrow-right"></i></a>
+                        <a href="#projects" class="mini-arrow"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience / Success Stories -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-heading text-center">Engineering Success Stories</h2>
-            
-            <div class="list-container">
-                
-                <!-- Project 1 -->
-                <div class="list-item">
-                    <div class="item-header">
-                        <div>
-                            <h3 class="item-title">Civic Issue Reporting System – Full-Stack Project</h3>
-                            <span class="item-date">Recent Project</span>
-                        </div>
-                        <div class="item-tags">
-                            <span class="tag">MERN</span>
-                            <span class="tag">Python</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-visual placeholder-visual">
-                            <i class="fas fa-city text-purple"></i>
-                        </div>
-                        <div class="item-desc">
-                            <p>A full-stack platform enabling citizens to report local issues. Implemented real-time issue tracking and integrated Python scripts for data validation and geolocation, significantly improving reporting transparency.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="list-item">
-                    <div class="item-header">
-                        <div>
-                            <h3 class="item-title">AI Productivity Tracker (Study Mate)</h3>
-                            <span class="item-date">Recent Project</span>
-                        </div>
-                        <div class="item-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                        </div>
-                    </div>
-                    <div class="item-body">
-                        <div class="item-visual placeholder-visual">
-                            <i class="fas fa-chart-line text-pink"></i>
-                        </div>
-                        <div class="item-desc">
-                            <p>A web-based productivity application to organize schedules and track progress. Features task logging, visualizations, and data-driven analytical performance reports.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
+    <!-- Technical Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-heading text-center">My Skills and Development</h2>
+            <h2 class="section-heading text-center">Technical Skills</h2>
+            <p class="section-intro">Core engineering competencies and technologies directly reflected in my academic and project portfolio.</p>
             
-            <div class="skills-square-grid">
+            <div class="skills-cats-grid">
                 
-                <div class="glass-square">
-                    <div class="square-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Fast</h3>
-                    <p>Optimal performance, ensuring quick load times and seamless user experience across all platforms.</p>
+                <!-- Category 1: Core CS Fundamentals -->
+                <div class="skill-cat-card">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-cube"></i></div>
+                        <h3 class="cat-title">Core CS Fundamentals</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Data Structures & Algorithms</span>
+                        <span class="skill-chip">Object-Oriented Programming</span>
+                        <span class="skill-chip">Client-Server Architecture</span>
+                        <span class="skill-chip">Distributed Systems (Academic)</span>
+                        <span class="skill-chip">Agile Methodology</span>
+                    </div>
                 </div>
-                
-                <div class="glass-square">
-                    <div class="square-icon"><i class="fas fa-desktop"></i></div>
-                    <h3>Responsive</h3>
-                    <p>Adaptive layouts designed to work flawlessly on any screen size, from mobile to desktop.</p>
+
+                <!-- Category 2: Languages -->
+                <div class="skill-cat-card">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-code"></i></div>
+                        <h3 class="cat-title">Languages</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">SQL</span>
+                        <span class="skill-chip">JavaScript</span>
+                        <span class="skill-chip">TypeScript</span>
+                        <span class="skill-chip">HTML5</span>
+                        <span class="skill-chip">CSS3</span>
+                    </div>
                 </div>
-                
-                <div class="glass-square">
-                    <div class="square-icon"><i class="far fa-lightbulb"></i></div>
-                    <h3>Intuitive</h3>
-                    <p>Crafting user-friendly interfaces that prioritize ease of navigation and smooth interaction.</p>
+
+                <!-- Category 3: Frameworks & Libraries -->
+                <div class="skill-cat-card">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3 class="cat-title">Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">FastAPI</span>
+                        <span class="skill-chip">Flask</span>
+                        <span class="skill-chip">REST APIs</span>
+                        <span class="skill-chip">Next.js</span>
+                        <span class="skill-chip">React</span>
+                        <span class="skill-chip">Tailwind CSS</span>
+                        <span class="skill-chip">SQLAlchemy</span>
+                        <span class="skill-chip">Pydantic</span>
+                    </div>
                 </div>
-                
-                <div class="glass-square">
-                    <div class="square-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Dynamic</h3>
-                    <p>Bringing web pages to life with interactive elements and modern animations.</p>
+
+                <!-- Category 4: AI & APIs -->
+                <div class="skill-cat-card">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-robot"></i></div>
+                        <h3 class="cat-title">AI & APIs</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Google Gemini API</span>
+                        <span class="skill-chip">Structured JSON Output</span>
+                        <span class="skill-chip">Google Places API</span>
+                        <span class="skill-chip">Geocoding & Maps APIs</span>
+                        <span class="skill-chip">JWT Authentication</span>
+                    </div>
+                </div>
+
+                <!-- Category 5: Databases -->
+                <div class="skill-cat-card">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-database"></i></div>
+                        <h3 class="cat-title">Databases</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">PostgreSQL</span>
+                        <span class="skill-chip">SQLite</span>
+                        <span class="skill-chip">MySQL</span>
+                        <span class="skill-chip">Redis (DBMS concepts)</span>
+                    </div>
+                </div>
+
+                <!-- Category 6: Tools & Platforms -->
+                <div class="skill-cat-card">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-tools"></i></div>
+                        <h3 class="cat-title">Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Git</span>
+                        <span class="skill-chip">GitHub</span>
+                        <span class="skill-chip">Docker / Docker Compose</span>
+                        <span class="skill-chip">Nginx</span>
+                        <span class="skill-chip">VS Code</span>
+                        <span class="skill-chip">Postman</span>
+                        <span class="skill-chip">Linux (basic)</span>
+                    </div>
+                </div>
+
+                <!-- Category 7: Networking & Other -->
+                <div class="skill-cat-card">
+                    <div class="cat-header">
+                        <div class="cat-icon"><i class="fas fa-wifi"></i></div>
+                        <h3 class="cat-title">Networking & Domains</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Cisco Certified (Networking)</span>
+                        <span class="skill-chip">HTTP Request-Response</span>
+                        <span class="skill-chip">Client-Server Protocol</span>
+                        <span class="skill-chip">Data Analytics</span>
+                        <span class="skill-chip">Quantum Computing (awareness)</span>
+                        <span class="skill-chip">Salesforce (basic)</span>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
-    
-    <!-- Education / Achievements (Simplified for design) -->
-    <section id="achievements" class="section">
-         <div class="container">
-            <h2 class="section-heading text-center">Education & Achievements</h2>
-            <div class="list-container">
-                <div class="list-item">
-                     <div class="item-header">
-                        <div>
-                            <h3 class="item-title">B.Tech in Computer Science & Engineering</h3>
-                            <span class="item-date">2023 - 2027</span>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-heading text-center">Featured Projects</h2>
+            <p class="section-intro">Full-stack software engineering projects featuring modern architectural patterns, REST APIs, and generative AI capabilities.</p>
+            
+            <div class="projects-grid">
+                
+                <!-- Project 1: AI-Powered City Search & Discovery Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-area">
+                            <h3 class="project-title">AI-Powered City Search & Discovery Platform</h3>
+                            <div class="project-meta-badges">
+                                <span class="meta-badge">2026</span>
+                                <span class="meta-badge">Full-Stack & AI</span>
+                                <span class="meta-badge">Microservices</span>
+                            </div>
                         </div>
-                        <div class="item-tags">
-                            <span class="tag">SISTec, Bhopal</span>
+                        <div class="project-action-links">
+                            <a href="https://github.com/Avinash58" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
                         </div>
+                    </div>
+
+                    <div class="project-tech-bar">
+                        <span class="tech-tag highlight"><i class="fas fa-brain"></i> Gemini 2.5 Flash</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Docker Compose</span>
+                    </div>
+
+                    <ul class="project-bullets">
+                        <li>
+                            Built a full-stack platform where users search restaurants, hotels, and attractions in any city, using <strong>Google Gemini 2.5 Flash</strong> with schema-validated JSON output and a multi-tier fallback (<strong>Gemini &rarr; OpenRouter &rarr; curated data</strong>), plus a multi-turn AI travel chatbot.
+                        </li>
+                        <li>
+                            Integrated <strong>Google Places &amp; Geocoding APIs</strong> with Haversine-based proximity ranking and browser geolocation for intelligent "near me" search.
+                        </li>
+                        <li>
+                            Developed a versioned <strong>REST API</strong> (JWT + bcrypt authentication, role-based admin panel, rate limiting) and containerized 6 services (<strong>PostgreSQL, Redis, Elasticsearch, FastAPI, Next.js, Nginx</strong>) with Docker Compose.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Project 2: CivicConnect -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title-area">
+                            <h3 class="project-title">CivicConnect &mdash; Civic Issue Reporting System</h3>
+                            <div class="project-meta-badges">
+                                <span class="meta-badge">Oct 2025 &ndash; Jan 2026</span>
+                                <span class="meta-badge">Team of 4</span>
+                                <span class="meta-mentor"><i class="fas fa-user-tie"></i> Mentor: Dr. Amit Dubey</span>
+                            </div>
+                        </div>
+                        <div class="project-action-links">
+                            <a href="https://github.com/Avinash58" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-tech-bar">
+                        <span class="tech-tag highlight">Python</span>
+                        <span class="tech-tag highlight">Flask</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">MVC Backend</span>
+                    </div>
+
+                    <ul class="project-bullets">
+                        <li>
+                            Architected a scalable client-server platform with <strong>REST APIs and a modular MVC backend</strong>, enabling citizens to report and track urban issues (potholes, drainage, streetlights) in place of manual complaint processes.
+                        </li>
+                        <li>
+                            Built a <strong>real-time admin dashboard</strong> that let municipal authorities prioritize and update issue statuses, cutting average complaint filing time versus the prior paper-based workflow.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-heading text-center">Education & Certifications</h2>
+            <p class="section-intro">Formal academic background alongside professional industry certifications and skill evaluations.</p>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 18px; color: var(--accent-pink);"><i class="fas fa-graduation-cap"></i> Academic Education</h3>
+            </div>
+
+            <div class="resume-section-grid" style="margin-bottom: 40px;">
+                
+                <!-- B.Tech -->
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-university"></i></div>
+                        <span class="info-card-badge">2023 &ndash; 2027</span>
+                    </div>
+                    <h4 class="info-card-title">Sagar Group of Institutions &mdash; SISTec GN</h4>
+                    <p class="info-card-subtitle">B.Tech. in Computer Science &amp; Engineering</p>
+                    <p class="info-card-desc">Comprehensive study in algorithms, system software, databases, networking, and applied full-stack engineering.</p>
+                    <div class="info-card-footer">
+                        <span><strong>CGPA: 7.1 / 10</strong></span>
+                        <span><i class="fas fa-map-marker-alt"></i> Bhopal, MP</span>
                     </div>
                 </div>
-                <div class="list-item">
-                     <div class="item-header">
-                        <div>
-                            <h3 class="item-title">Qualified SIH 2025 & TcsCodevita13 Round 2</h3>
-                            <span class="item-date">2024-2025</span>
-                        </div>
-                        <div class="item-tags">
-                            <span class="tag">Hackathon</span>
-                            <span class="tag">Coding</span>
-                        </div>
+
+                <!-- 12th CBSE -->
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-school"></i></div>
+                        <span class="info-card-badge">2023</span>
                     </div>
+                    <h4 class="info-card-title">Modern Academy Ashok Nagar</h4>
+                    <p class="info-card-subtitle">Senior Secondary (12th), CBSE</p>
+                    <p class="info-card-desc">Specialized in Science stream with foundational focus in Physics, Chemistry, and Mathematics.</p>
+                    <div class="info-card-footer">
+                        <span><strong>CBSE Board</strong></span>
+                        <span><i class="fas fa-map-marker-alt"></i> Gaya, Bihar</span>
+                    </div>
+                </div>
+
+                <!-- 10th CBSE -->
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-book-reader"></i></div>
+                        <span class="info-card-badge">2021</span>
+                    </div>
+                    <h4 class="info-card-title">D.A.V C.R.R.C. Medical</h4>
+                    <p class="info-card-subtitle">Secondary School (10th), CBSE</p>
+                    <p class="info-card-desc">Completed high school matriculation with strong fundamentals in mathematics and general sciences.</p>
+                    <div class="info-card-footer">
+                        <span><strong>CBSE Board</strong></span>
+                        <span><i class="fas fa-map-marker-alt"></i> Gaya, Bihar</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Certifications & Assessments -->
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 18px; color: var(--accent-purple);"><i class="fas fa-certificate"></i> Certifications & Assessments</h3>
+            </div>
+
+            <div class="resume-section-grid">
+                
+                <!-- Cisco Certification -->
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-award"></i></div>
+                        <span class="info-card-badge">Cisco Certified</span>
+                    </div>
+                    <h4 class="info-card-title">Python Essentials 1 &amp; 2</h4>
+                    <p class="info-card-subtitle">Cisco Networking Academy</p>
+                    <p class="info-card-desc">Comprehensive certification covering core Python programming, data structures, object-oriented principles, modular design, and automation scripting.</p>
+                </div>
+
+                <!-- Deloitte Simulation -->
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-chart-pie"></i></div>
+                        <span class="info-card-badge">Deloitte</span>
+                    </div>
+                    <h4 class="info-card-title">Data Analytics Job Simulation</h4>
+                    <p class="info-card-subtitle">Deloitte</p>
+                    <p class="info-card-desc">Hands-on analytical simulation focusing on data interpretation, business analytics, performance metrics calculation, and presentation of insights.</p>
+                </div>
+
+                <!-- Quantum Computing -->
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-atom"></i></div>
+                        <span class="info-card-badge">C-DAC &amp; IIT Roorkee</span>
+                    </div>
+                    <h4 class="info-card-title">Quantum Computing</h4>
+                    <p class="info-card-subtitle">C-DAC &amp; IIT Roorkee</p>
+                    <p class="info-card-desc">Exploration of foundational quantum algorithms, qubit properties, quantum logic circuits, and the theoretical paradigm of quantum systems.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hackathons, Seminars & Workshops Section -->
+    <section id="hackathons" class="section">
+        <div class="container">
+            <h2 class="section-heading text-center">Hackathons & Workshops</h2>
+            <p class="section-intro">Competitive hackathons, national innovation bootcamps, and technical conferences.</p>
+            
+            <div class="resume-section-grid">
+                
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-trophy"></i></div>
+                        <span class="info-card-badge">Oct 15&ndash;17, 2025</span>
+                    </div>
+                    <h4 class="info-card-title">Samadhan 2.0 &mdash; National Hackathon</h4>
+                    <p class="info-card-subtitle">SISTec GN</p>
+                    <p class="info-card-desc">Competed in the national-level hackathon building rapid tech prototypes under intense timelines with multidisciplinary team collaboration.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-lightbulb"></i></div>
+                        <span class="info-card-badge">Apr 20&ndash;24, 2026</span>
+                    </div>
+                    <h4 class="info-card-title">AICTE-IDE National Bootcamp 2026</h4>
+                    <p class="info-card-subtitle">MITS &bull; Innovation &amp; Design Engineering</p>
+                    <p class="info-card-desc">Selected for intensive national training in design thinking, rapid hardware/software prototyping, and engineering product innovation.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-code"></i></div>
+                        <span class="info-card-badge">2024</span>
+                    </div>
+                    <h4 class="info-card-title">Smart India Hackathon (SIH) 2024</h4>
+                    <p class="info-card-subtitle">Government of India</p>
+                    <p class="info-card-desc">Participated in India's premier nationwide government-sponsored hackathon, tackling pressing public sector challenge problem statements.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-top">
+                        <div class="info-card-icon"><i class="fas fa-users"></i></div>
+                        <span class="info-card-badge">Dec 19&ndash;20, 2024</span>
+                    </div>
+                    <h4 class="info-card-title">7th Int. Conf. on Image Processing</h4>
+                    <p class="info-card-subtitle">MANIT, Bhopal</p>
+                    <p class="info-card-desc">Attended international research proceedings and peer sessions focused on Image Processing and Pattern Recognition architectures.</p>
+                </div>
+
+            </div>
+
+            <!-- Co-Curricular & Additional Details Card -->
+            <div class="extra-details-card">
+                <div class="extra-col">
+                    <h4><i class="fas fa-star"></i> Co-Curricular Activities</h4>
+                    <p>Attended AI/ML workshops, contributed to team-based technical presentations, and actively engaged in automation experiments and hands-on AI prototyping outside the core academic curriculum.</p>
+                </div>
+                <div class="extra-col">
+                    <h4><i class="fas fa-language"></i> Languages</h4>
+                    <p><strong>English</strong> (Professional Working Proficiency)<br><strong>Hindi</strong> (Native / Bilingual Proficiency)</p>
+                </div>
+                <div class="extra-col">
+                    <h4><i class="fas fa-map-marked-alt"></i> Address / Campus</h4>
+                    <p>SISTec GN Campus, Bhopal, Madhya Pradesh &mdash; 462036, India</p>
                 </div>
             </div>
-         </div>
+
+        </div>
     </section>
 
     <!-- Footer / Contact -->
     <footer id="contact" class="footer section">
         <div class="container">
-            <div class="glass-card contact-card">
-                <h2 class="card-title text-center">Let's work together!</h2>
-                <p class="text-center mb-4">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                
-                <form class="contact-form">
-                    <div class="input-group">
-                        <input type="email" placeholder="Enter your email address" required>
-                        <button type="submit" class="btn-gradient">Subscribe</button>
-                    </div>
-                </form>
-                
+            <div class="glass-card contact-card" style="max-width: 800px;">
+                <h2 class="card-title text-center">Let's Connect &amp; Collaborate</h2>
+                <p class="text-center mb-4" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 28px auto;">
+                    I am actively seeking software engineering internships, developer roles, and collaborative projects. Feel free to reach out directly!
+                </p>
+
+                <!-- Direct Contact Details Grid -->
+                <div class="contact-details-grid">
+                    <a href="mailto:aviraj22072005@gmail.com" class="contact-detail-card">
+                        <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-detail-info">
+                            <div class="contact-detail-label">Email</div>
+                            <div class="contact-detail-val">aviraj22072005@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="tel:+917295053251" class="contact-detail-card">
+                        <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-detail-info">
+                            <div class="contact-detail-label">Phone</div>
+                            <div class="contact-detail-val">+91-7295053251</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
+                        <div class="contact-detail-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="contact-detail-info">
+                            <div class="contact-detail-label">LinkedIn</div>
+                            <div class="contact-detail-val">avinash-raj-30797b300</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Avinash58" target="_blank" rel="noopener noreferrer" class="contact-detail-card">
+                        <div class="contact-detail-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-detail-info">
+                            <div class="contact-detail-label">GitHub</div>
+                            <div class="contact-detail-val">github.com/Avinash58</div>
+                        </div>
+                    </a>
+                </div>
+
                 <div class="footer-bottom">
-                    <p>&copy; 2024 Avinash Raj. All rights reserved.</p>
+                    <p>&copy; 2026 Avinash Raj. All rights reserved.</p>
                     <div class="social-links-footer">
-                        <a href="mailto:avinashne2207@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://github.com/Avinash58" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:aviraj22072005@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Avinash58" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/avinash-raj-30797b300" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -277,7 +596,7 @@
     <div class="resume-modal" id="resumeModal">
         <div class="resume-modal-overlay" id="resumeOverlay"></div>
         <div class="resume-modal-content">
-            <button class="resume-modal-close" id="resumeClose">
+            <button class="resume-modal-close" id="resumeClose" aria-label="Close modal">
                 <i class="fas fa-times"></i>
             </button>
             <div class="resume-modal-header">
@@ -295,3 +614,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
