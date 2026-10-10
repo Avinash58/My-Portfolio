@@ -141,6 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.opacity = '1';
     }, 100);
 
+    // Remove any stale overflow lock from prior car intro
+    document.body.style.overflow = '';
+
     // ===========================
     // RESUME MODAL
     // ===========================
@@ -160,11 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeResumeModal() {
         if (resumeModal) {
             resumeModal.classList.remove('open');
-            // If poster is still open, keep hidden, else restore
-            const poster = document.getElementById('filmPosterLanding');
-            if (!poster || !poster.classList.contains('active')) {
-                document.body.style.overflow = '';
-            }
+            document.body.style.overflow = '';
         }
     }
 
@@ -180,62 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ==============================================
-    // CINEMATIC FILM POSTER INTRO (First Landing Page)
-    // ==============================================
-    const filmPosterLanding   = document.getElementById('filmPosterLanding');
-    const sideBtnAboutAvinash = document.getElementById('sideBtnAboutAvinash');
-    const centerBtnAboutAvinash = document.getElementById('centerBtnAboutAvinash');
-    const reopenPosterBtn     = document.getElementById('reopenPosterBtn');
-    const floatingPosterPill  = document.getElementById('floatingPosterPill');
-
-    // Initial page load lock to the film poster screen
-    if (filmPosterLanding && filmPosterLanding.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    }
-
-    function enterMainPortfolio() {
-        if (!filmPosterLanding) return;
-        filmPosterLanding.classList.add('exiting');
-        
-        // After cinematic zoom-out transition
-        setTimeout(() => {
-            filmPosterLanding.classList.remove('active');
-            filmPosterLanding.classList.remove('exiting');
-            document.body.style.overflow = '';
-            
-            // Smoothly scroll to main portfolio hero
-            const heroSection = document.getElementById('home');
-            if (heroSection) {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-        }, 750);
-    }
-
-    function reopenFilmPoster(e) {
-        if (e) e.preventDefault();
-        if (!filmPosterLanding) return;
-        filmPosterLanding.classList.remove('exiting');
-        filmPosterLanding.classList.add('active');
-        filmPosterLanding.scrollTop = 0;
-        document.body.style.overflow = 'hidden';
-    }
-
-    if (sideBtnAboutAvinash) {
-        sideBtnAboutAvinash.addEventListener('click', enterMainPortfolio);
-    }
-    if (centerBtnAboutAvinash) {
-        centerBtnAboutAvinash.addEventListener('click', enterMainPortfolio);
-    }
-    if (reopenPosterBtn) {
-        reopenPosterBtn.addEventListener('click', reopenFilmPoster);
-    }
-    if (floatingPosterPill) {
-        floatingPosterPill.addEventListener('click', reopenFilmPoster);
-    }
 });
 
 
@@ -280,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach hover state after DOM is ready
     function attachHoverTargets() {
         const hoverTargets = document.querySelectorAll(
-            'a, button, [role="button"], .mini-arrow, .node, .glass-square, .mini-card, .list-item, .tag, .btn-download, .btn-resume, .btn-primary, .btn-nav, .resume-modal-close, .skill-chip, .skill-cat-card, .project-card, .project-btn, .info-card, .contact-detail-card, .quick-badge, .poster-side-button, .poster-enter-btn, .floating-poster-pill, .poster-nav-btn'
+            'a, button, [role="button"], .mini-arrow, .node, .glass-square, .mini-card, .list-item, .tag, .btn-download, .btn-resume, .btn-primary, .btn-nav, .resume-modal-close, .skill-chip, .skill-cat-card, .project-card, .project-btn, .info-card, .contact-detail-card, .quick-badge'
         );
         hoverTargets.forEach(el => {
             el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
